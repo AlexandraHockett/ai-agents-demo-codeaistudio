@@ -514,6 +514,13 @@ export default function Page() {
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-gray-50 dark:bg-gray-950">
 
+      {/* ── Demo banner ── */}
+      <div className="bg-amber-50 dark:bg-amber-950/40 border-b border-amber-200 dark:border-amber-800/50 px-4 py-1.5 flex items-center justify-center gap-2 shrink-0">
+        <span className="text-[10px] font-semibold tracking-widest text-amber-700 dark:text-amber-400 uppercase">Interactive Demo</span>
+        <span className="text-amber-400 dark:text-amber-600 text-[10px]">·</span>
+        <span className="text-[11px] text-amber-600 dark:text-amber-500">Respostas simuladas — sem chamadas reais à API</span>
+      </div>
+
       {/* ── Header ── */}
       <div className="bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-4 shrink-0">
         <div className="flex items-center justify-between mb-4">
@@ -525,6 +532,8 @@ export default function Page() {
               <h1 className="text-xl font-bold text-white leading-none">AI Agents</h1>
               <p className="text-violet-200 text-xs mt-0.5">
                 by <a href="https://codeaistudio.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Code AI Studio</a>
+                <span className="mx-1.5 opacity-40">·</span>
+                built by <a href="https://alexandrahockett.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Alexandra Hockett</a>
               </p>
             </div>
           </div>

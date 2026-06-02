@@ -518,7 +518,7 @@ export default function Page() {
       <div className="bg-amber-50 dark:bg-amber-950/40 border-b border-amber-200 dark:border-amber-800/50 px-4 py-1.5 flex items-center justify-center gap-2 shrink-0">
         <span className="text-[10px] font-semibold tracking-widest text-amber-700 dark:text-amber-400 uppercase">Interactive Demo</span>
         <span className="text-amber-400 dark:text-amber-600 text-[10px]">·</span>
-        <span className="text-[11px] text-amber-600 dark:text-amber-500">Respostas simuladas — sem chamadas reais à API</span>
+        <span className="text-[11px] text-amber-600 dark:text-amber-500">Simulated responses — no real API calls</span>
       </div>
 
       {/* ── Header ── */}

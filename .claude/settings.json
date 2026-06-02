@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(netstat -ano | Select-String \":300[0-9]\\\\s\" | ForEach-Object { $_ -replace '\\\\s+', ' ' })",
+      "PowerShell(@\\(32832, 42624, 26308\\) | ForEach-Object { $p = Get-Process -Id $_ -ErrorAction SilentlyContinue; if \\($p\\) { \"$_ -> $\\($p.ProcessName\\) | $\\($p.MainWindowTitle\\) | $\\($p.Path\\)\" } })",
+      "PowerShell(@\\(32832, 42624, 26308\\) | ForEach-Object { $pid = $_; $cmd = \\(Get-CimInstance Win32_Process -Filter \"ProcessId=$pid\" -ErrorAction SilentlyContinue\\).CommandLine; \"PID $pid \\(porta $\\( @{32832=3000;42624=3001;26308=3002}[$pid] \\)\\): $cmd\" })",
+      "PowerShell(foreach \\($id in @\\(32832, 42624, 26308\\)\\) { $cmd = \\(Get-CimInstance Win32_Process -Filter \"ProcessId=$id\" -ErrorAction SilentlyContinue\\).CommandLine; Write-Output \"PID ${id}: $cmd\" })",
+      "PowerShell(foreach \\($id in @\\(32832, 42624, 26308\\)\\) { Stop-Process -Id $id -Force -ErrorAction SilentlyContinue; Write-Output \"Parado PID $id\" })",
+      "Bash(git config *)",
+      "Bash(gh auth *)"
+    ]
+  }
+}

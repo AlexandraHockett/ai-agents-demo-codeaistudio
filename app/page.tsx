@@ -1220,6 +1220,17 @@ export default function Page() {
           </div>
         </>
       )}
+
+      {/* ── Footer ── */}
+      <div className="shrink-0 py-2 flex items-center justify-center bg-gray-950 border-t border-gray-800">
+        <p className="text-xs text-gray-500">
+          Made with <span className="text-red-400">♥</span> by{' '}
+          <a href="https://alexandrahockett.com" target="_blank" rel="noopener noreferrer"
+            className="font-semibold bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent hover:from-violet-300 hover:to-indigo-300 transition-all">
+            AHockett
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
